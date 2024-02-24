@@ -1,34 +1,32 @@
 # CS361_Microservice
 
 # Image microservice
-# API URL: https://wgnlzahnglcdktkuhomx.supabase.co/functions/v1/get-book-image
+API URL: https://wgnlzahnglcdktkuhomx.supabase.co/functions/v1/get-book-image
 
 # To use this API make a POST request to API endpoint
-# 
-#
-# interface ImageRequest {
-#  bookTitle: string;
-#  orientation?: "all" | "horizontal" | "vertical";
-# }
-# 
-# For example, using the fetch() API:
-# const request: ImageRequest = {
-#    bookTitle: [BOOK TITLE],
-#    orientation: 'vertical'
-#  };
-#  const imageRes = await fetch(
-#    IMG_SERVICE,
-#    {
-#      method: 'POST',
-#      body: JSON.stringify(request)
-#    } as RequestInit
-#  );
-#  const response: ImageResponse = await imageRes.json();
 
-# interface ImageResponse {
-#   webformatURL: string;
-#   largeImageURL: string;
-# }
+interface ImageRequest {
+ bookTitle: string;
+ orientation?: "all" | "horizontal" | "vertical";
+}
+
+For example, using the fetch() API:
+const request: ImageRequest = {
+  bookTitle: [BOOK TITLE],
+  orientation: 'vertical'
+};
+const imageRes = await fetch(
+  IMG_SERVICE,
+  {
+    method: 'POST',
+    body: JSON.stringify(request)
+  } as RequestInit
+);
+const response: ImageResponse = await imageRes.json()
+interface ImageResponse {
+  webformatURL: string;
+  largeImageURL: string;
+}
 
 # UML
 # ![alt text](https://github.com/puczkowskyjp/CS361_Microservice/blob/main/public/UML.png?raw=true)
