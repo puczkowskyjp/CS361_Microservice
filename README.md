@@ -1,14 +1,16 @@
 # CS361_Microservice
 
 # Image microservice
-API URL: https://wgnlzahnglcdktkuhomx.supabase.co/functions/v1/get-book-image
+> [!IMPORTANT]
+> API URL: https://wgnlzahnglcdktkuhomx.supabase.co/functions/v1/get-book-image
 
 # To use this API make a POST request to API endpoint
-
-interface ImageRequest {
- bookTitle: string;
- orientation?: "all" | "horizontal" | "vertical";
-}
+<p>
+  interface ImageRequest {
+  bookTitle: string;
+  orientation?: "all" | "horizontal" | "vertical";
+  }
+</p>
 
 For example, using the fetch() API:
 const request: ImageRequest = {
