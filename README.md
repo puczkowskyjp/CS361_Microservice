@@ -7,8 +7,10 @@
 # To use this API make a POST request to API endpoint
 <p>
   interface ImageRequest {
+  <br/>
   bookTitle: string;
   orientation?: "all" | "horizontal" | "vertical";
+  <br/>
   }
 </p>
 
