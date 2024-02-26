@@ -2,9 +2,6 @@
 
 # Image microservice
 
-> [!IMPORTANT] API URL:
-> https://wgnlzahnglcdktkuhomx.supabase.co/functions/v1/get-book-image
-
 # To use this API make a POST request to API endpoint
 
 Example, using the fetch() API:
@@ -19,6 +16,9 @@ const request: ImageRequest = {
   bookTitle: [BOOK TITLE],
   orientation: 'vertical'
 };
+
+const IMG_SERVICE = "https://wgnlzahnglcdktkuhomx.supabase.co/functions/v1/get-book-image";
+
 const imageRes = await fetch(
   IMG_SERVICE,
   {
